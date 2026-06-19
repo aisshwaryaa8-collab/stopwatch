@@ -37,7 +37,3 @@ The stopwatch uses `Date.now()` to track elapsed time accurately, updating the d
 4. Click **Lap** to record a lap time while running.
 5. Click **Pause** to pause, and the button will change to **Resume** to continue.
 6. Click **Reset** to clear the timer and all lap records.
-
-## Author
-
-Built as Task-02 of the PRODIGY InfoTech Web Development Internship.
