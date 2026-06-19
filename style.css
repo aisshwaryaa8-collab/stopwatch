@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e1b4b 0%, #3b82f6 100%);
+  color: #ffffff;
+}
+
+.stopwatch-container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px 50px;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+
+.display {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 32px;
+  font-family: 'Courier New', monospace;
+  color: #f3f4f6;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #ffffff;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn.start {
+  background-color: #22c55e;
+}
+.btn.start:hover:not(:disabled) {
+  background-color: #16a34a;
+}
+
+.btn.pause {
+  background-color: #f59e0b;
+}
+.btn.pause:hover:not(:disabled) {
+  background-color: #d97706;
+}
+
+.btn.lap {
+  background-color: #3b82f6;
+}
+.btn.lap:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.btn.reset {
+  background-color: #ef4444;
+}
+.btn.reset:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+.lap-list {
+  list-style: none;
+  max-height: 180px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.lap-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+}
+
+.lap-list li:last-child {
+  border-bottom: none;
+}
